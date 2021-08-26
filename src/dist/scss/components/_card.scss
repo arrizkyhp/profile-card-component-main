@@ -1,0 +1,85 @@
+@use '../utilities' as *;
+
+.card {
+  min-width: rem(300);
+  font-size: rem(20);
+  background: $white;
+  border-radius: rem(20);
+  overflow: hidden;
+  box-shadow: 2px 20px 40px rgba($color: $dark, $alpha: 0.25);
+
+  &__header {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    @include centering();
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(25);
+
+    img {
+      border: rem(4) solid $white;
+      margin-top: rem(-60);
+      border-radius: 50%;
+      margin-bottom: rem(20);
+    }
+
+    &__name {
+      margin-bottom: rem(5);
+
+      h1 {
+        color: $very-dark-desaturated-blue;
+        font-size: rem(18);
+        display: inline;
+        margin-right: rem(3);
+      }
+
+      p {
+        display: inline;
+        font-weight: 400;
+        font-size: rem(16);
+        color: $dark-grayish-blue;
+      }
+    }
+
+    span {
+      font-size: rem(14);
+      color: $dark-grayish-blue;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: rem(25) rem(5) rem(18) rem(5);
+    border-top: 1px solid $line-color;
+
+    &__stats {
+      display: flex;
+      justify-content: space-evenly;
+      width: 90%;
+
+      &__info {
+        @include centering();
+        display: flex;
+        flex-direction: column;
+        width: rem(80);
+
+        h2 {
+          font-size: rem(18);
+          color: $very-dark-desaturated-blue;
+        }
+
+        span {
+          line-height: rem(25);
+          font-size: rem(11);
+          letter-spacing: rem(1);
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}

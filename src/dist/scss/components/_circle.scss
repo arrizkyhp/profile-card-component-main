@@ -1,0 +1,29 @@
+@use '../utilities' as *;
+
+.circle {
+  &__1,
+  &__2 {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__1 {
+    top: -40rem;
+    left: -18rem;
+
+    @include breakpoint-max(small) {
+      top: rem(-700);
+      left: rem(-700);
+    }
+  }
+
+  &__2 {
+    bottom: -40rem;
+    right: -17rem;
+
+    @include breakpoint-max(small) {
+      bottom: rem(-630);
+      right: rem(-680);
+    }
+  }
+}
